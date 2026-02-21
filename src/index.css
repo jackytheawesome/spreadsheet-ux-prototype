@@ -56,3 +56,24 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* Toolbar ribbon block: 2px padding, 1px gray-200 border, 10px radius */
+.univer-grid.univer-shrink-0.univer-grid-flow-col.univer-gap-2.univer-px-2 {
+  padding: 2px !important;
+  border: 1px solid var(--univer-gray-200, #e3e5ea);
+  border-radius: 10px;
+}
+
+/* Flex divide container: add gap-2 (0.5rem), light and dark */
+.univer-flex.univer-overflow-hidden.univer-divide-x.univer-divide-y-0.univer-divide-solid {
+  gap: 0.5rem;
+}
+
+/* Inline truncate blocks: 8px radius in all states */
+.univer-inline-block.univer-max-w-full.univer-truncate,
+.univer-inline-block.univer-max-w-full.univer-truncate:hover,
+.univer-inline-block.univer-max-w-full.univer-truncate:focus,
+.univer-inline-block.univer-max-w-full.univer-truncate:focus-visible,
+.univer-inline-block.univer-max-w-full.univer-truncate:active {
+  border-radius: 8px;
+}

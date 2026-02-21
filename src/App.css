@@ -14,7 +14,6 @@
   /* Use Univer design tokens so header matches spreadsheet UI */
   background: var(--univer-white, #ffffff);
   color: var(--univer-gray-900, #1b1c1f);
-  border-bottom: 1px solid var(--univer-gray-200, #e3e5ea);
   flex-shrink: 0;
 }
 
