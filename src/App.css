@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.75rem 1rem;
+  padding: 12px 0.75rem 8px 0.75rem;
   /* Use Univer design tokens so header matches spreadsheet UI */
   background: var(--univer-white, #ffffff);
   color: var(--univer-gray-900, #1b1c1f);
