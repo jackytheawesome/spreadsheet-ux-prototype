@@ -92,6 +92,14 @@ button:focus-visible {
   box-shadow: none !important;
 }
 
+/* Name box (defined-name) wrapper: 1px solid border, 10px radius */
+[data-u-comp="defined-name"] > .univer-relative.univer-box-border.univer-flex.univer-h-full.univer-w-24 {
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: var(--univer-gray-200) !important;
+  border-radius: 10px !important;
+}
+
 /* Ribbon header: no bottom border (Ro2 .univer-box-border), 2px vertical margin */
 #univer-container header > .univer-box-border {
   border-bottom-width: 0;
@@ -120,13 +128,15 @@ button:focus-visible {
   background-color: rgba(255, 255, 255, 1) !important;
   color: var(--univer-gray-800) !important;
   border: 1px solid var(--univer-gray-200);
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 
-/* Name / cell-type box in formula bar: 1px border and 10px radius (override formula-bar border removal) */
+/* Close button (K_4) in formula bar: no border */
 #univer-container header .univer-relative.univer-box-border.univer-flex.univer-h-full.univer-w-20.univer-items-center.univer-justify-center.univer-text-xs {
-  border: 1px solid var(--univer-gray-200) !important;
-  border-radius: 10px;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  border-image: none !important;
 }
 
 /* Univer sheet main canvas: top border only (1px solid gray-200), no other borders */
