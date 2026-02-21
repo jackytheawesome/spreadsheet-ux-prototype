@@ -108,8 +108,8 @@ button:focus-visible {
 /* Start dropdown button in Univer header: light pill → white box with border and 10px radius */
 #univer-container header a.univer-mr-2.univer-flex.univer-h-7 {
   background-color: rgba(255, 255, 255, 1) !important;
-  color: rgba(28, 28, 28, 1) !important;
-  border: 1px solid rgba(235, 235, 235, 1) !important;
+  color: var(--univer-gray-800) !important;
+  border: 1px solid var(--univer-gray-200) !important;
   border-radius: 10px !important;
 }
 
