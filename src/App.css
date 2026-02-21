@@ -1,0 +1,29 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 0;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--g-color-base-background, #fff);
+  border-bottom: 1px solid var(--g-color-line-generic-solid, #e5e5e5);
+  flex-shrink: 0;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.univer-container {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
