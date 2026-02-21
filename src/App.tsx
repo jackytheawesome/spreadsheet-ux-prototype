@@ -5,6 +5,7 @@ import UniverPresetSheetsCoreEnUS from '@univerjs/preset-sheets-core/locales/en-
 
 import '@univerjs/preset-sheets-core/lib/index.css'
 import './App.css'
+import { appTheme } from './theme'
 
 /** Only these fonts are shown in the font dropdown (Univer default list overridden). */
 const ALLOWED_FONTS = [
@@ -19,6 +20,7 @@ function App() {
 
   useEffect(() => {
     const { univer, univerAPI } = createUniver({
+      theme: appTheme,
       locale: LocaleType.EN_US,
       locales: {
         [LocaleType.EN_US]: mergeLocales(UniverPresetSheetsCoreEnUS),
