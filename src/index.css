@@ -108,8 +108,8 @@ button:focus-visible {
 
 /* Univer spreadsheet header: horizontal padding and margin; no bottom border */
 #univer-container header {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   padding-left: 12px;
   padding-right: 12px;
   margin-left: 0px;
@@ -131,7 +131,7 @@ button:focus-visible {
   border-image: none;
 }
 
-/* Ribbon header: no bottom border (Ro2 .univer-box-border), 2px vertical margin, no horizontal padding */
+/* Ribbon header: no bottom border (Ro2 .univer-box-border), no vertical margin, no horizontal padding */
 #univer-container header > .univer-box-border {
   padding-left: 0;
   padding-right: 0;
@@ -139,8 +139,8 @@ button:focus-visible {
   border-bottom-color: transparent;
   border-bottom-style: none;
   border-image: none;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 /* Univer header formula bar area: 1px solid border, 10px radius, border-box */
