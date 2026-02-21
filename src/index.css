@@ -94,10 +94,14 @@ button:focus-visible {
 
 /* Name box (defined-name) wrapper: 1px solid border, 10px radius */
 [data-u-comp="defined-name"] > .univer-relative.univer-box-border.univer-flex.univer-h-full.univer-w-24 {
-  border-width: 1px !important;
   border-style: solid !important;
+  border-width: 1px !important;
   border-color: var(--univer-gray-200) !important;
   border-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
 }
 
 /* Name box input: no right border (override univer-border-r) */
@@ -108,10 +112,12 @@ button:focus-visible {
   border-image: none !important;
 }
 
-/* Univer spreadsheet header: horizontal padding */
+/* Univer spreadsheet header: horizontal padding and margin */
 #univer-container header {
   padding-left: 0px;
   padding-right: 0px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 /* Ribbon header: no bottom border (Ro2 .univer-box-border), 2px vertical margin */
