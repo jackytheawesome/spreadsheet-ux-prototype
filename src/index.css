@@ -150,9 +150,9 @@ button:focus-visible {
   background: unset;
   background-color: unset;
   box-sizing: border-box;
-  padding-top: 4px;
+  padding-top: 0px;
   padding-right: 4px;
-  padding-bottom: 4px;
+  padding-bottom: 0px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -188,4 +188,5 @@ button:focus-visible {
 canvas[data-u-comp="render-canvas"] {
   border: none !important;
   outline: none !important;
+  vertical-align: middle;
 }
