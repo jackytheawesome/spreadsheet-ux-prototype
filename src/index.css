@@ -91,3 +91,9 @@ button:focus-visible {
   --tw-ring-width: 0 !important;
   box-shadow: none !important;
 }
+
+/* Toolbar row (h-10 grid with border-b): remove border */
+.univer-grid.univer-h-10.univer-grid-flow-col.univer-grid-cols-\[auto\,1fr\].univer-border-b {
+  border-width: 0 !important;
+  border-style: none !important;
+}
