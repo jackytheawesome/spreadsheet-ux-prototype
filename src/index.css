@@ -167,8 +167,8 @@ button:focus-visible {
   box-sizing: border-box;
 }
 
-/* Univer sheet main canvas: top border only (1px solid gray-200); !important overrides inline style from engine-render */
+/* Univer sheet main canvas: no border/outline */
 canvas[data-u-comp="render-canvas"] {
   border: none !important;
-  border-top: 1px solid var(--univer-gray-200, #e3e5ea) !important;
+  outline: none !important;
 }
