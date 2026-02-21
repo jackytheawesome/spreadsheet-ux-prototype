@@ -92,12 +92,6 @@ button:focus-visible {
   box-shadow: none !important;
 }
 
-/* Toolbar row (h-10 grid with border-b): remove border */
-.univer-grid.univer-h-10.univer-grid-flow-col.univer-grid-cols-\[auto\,1fr\].univer-border-b {
-  border-width: 0 !important;
-  border-style: none !important;
-}
-
 /* Univer header formula bar area: 1px solid gray-200 border */
 #univer-container header .univer-flex.univer-w-full.univer-flex-1.univer-overflow-hidden.univer-pl-3 {
   border-style: solid;
