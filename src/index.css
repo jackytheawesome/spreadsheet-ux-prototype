@@ -100,6 +100,14 @@ button:focus-visible {
   border-radius: 10px !important;
 }
 
+/* Name box input: no right border (override univer-border-r) */
+[data-u-comp="defined-name"] input.univer-box-border {
+  border-right-width: 0 !important;
+  border-right-style: none !important;
+  border-right-color: transparent !important;
+  border-image: none !important;
+}
+
 /* Ribbon header: no bottom border (Ro2 .univer-box-border), 2px vertical margin */
 #univer-container header > .univer-box-border {
   border-bottom-width: 0;
