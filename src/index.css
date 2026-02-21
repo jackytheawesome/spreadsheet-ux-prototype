@@ -160,19 +160,15 @@ button:focus-visible {
   border-image: none !important;
 }
 
-/* Univer sheet main canvas: top border only (1px solid gray-200), no other borders */
+/* Univer sheet canvas wrapper (the div that directly contains the render canvas): full border + radius */
+#univer-container div:has(> canvas[data-u-comp="render-canvas"]) {
+  border: 1px solid var(--univer-gray-200, #e3e5ea);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Univer sheet main canvas: top border only (1px solid gray-200); !important overrides inline style from engine-render */
 canvas[data-u-comp="render-canvas"] {
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--univer-gray-200);
-  border-top-color: rgba(227, 229, 234, 1);
-  border-right-width: 0;
-  border-right-color: rgba(0, 0, 0, 0);
-  border-right-style: none;
-  border-bottom-width: 0;
-  border-bottom-color: rgba(0, 0, 0, 0);
-  border-bottom-style: none;
-  border-left-width: 0;
-  border-left-color: rgba(0, 0, 0, 0);
-  border-left-style: none;
+  border: none !important;
+  border-top: 1px solid var(--univer-gray-200, #e3e5ea) !important;
 }
