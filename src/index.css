@@ -92,22 +92,27 @@ button:focus-visible {
   box-shadow: none !important;
 }
 
-/* Ribbon header: no bottom border (Ro2 .univer-box-border) */
+/* Ribbon header: no bottom border (Ro2 .univer-box-border), 2px vertical margin */
 #univer-container header > .univer-box-border {
   border-bottom-width: 0;
   border-bottom-color: transparent;
   border-bottom-style: none;
   border-image: none;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 /* Univer header formula bar area: 1px solid border, 10px radius, border-box */
 #univer-container header .univer-flex.univer-w-full.univer-flex-1.univer-overflow-hidden.univer-pl-3 {
-  border: 1px solid rgb(27, 28, 31);
+  border: 1px solid var(--univer-gray-200);
   border-radius: 10px;
   background: unset;
   background-color: unset;
   box-sizing: border-box;
   padding-top: 2px;
+  padding-bottom: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Start dropdown button in Univer header: light pill → white box with border and 10px radius */
@@ -115,6 +120,12 @@ button:focus-visible {
   background-color: rgba(255, 255, 255, 1) !important;
   color: var(--univer-gray-800) !important;
   border: 1px solid var(--univer-gray-200);
+  border-radius: 10px;
+}
+
+/* Name / cell-type box in formula bar: 1px border and 10px radius (override formula-bar border removal) */
+#univer-container header .univer-relative.univer-box-border.univer-flex.univer-h-full.univer-w-20.univer-items-center.univer-justify-center.univer-text-xs {
+  border: 1px solid var(--univer-gray-200) !important;
   border-radius: 10px;
 }
 
