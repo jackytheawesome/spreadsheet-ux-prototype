@@ -83,8 +83,8 @@ button:focus-visible {
 [data-u-comp="formula-bar"] *,
 [data-u-comp="defined-name"],
 [data-u-comp="defined-name"] * {
-  border-width: 0 !important;
-  border-style: none !important;
+  border-width: 0;
+  border-style: none;
   box-shadow: none !important;
 }
 [data-u-comp="formula-bar"] .univer-ring-1 {
@@ -94,10 +94,10 @@ button:focus-visible {
 
 /* Ribbon header: no bottom border (Ro2 .univer-box-border) */
 #univer-container header > .univer-box-border {
-  border-bottom-width: 0 !important;
-  border-bottom-color: transparent !important;
-  border-bottom-style: none !important;
-  border-image: none !important;
+  border-bottom-width: 0;
+  border-bottom-color: transparent;
+  border-bottom-style: none;
+  border-image: none;
 }
 
 /* Univer header formula bar area: 1px solid border, 10px radius, border-box */
@@ -114,8 +114,8 @@ button:focus-visible {
 #univer-container header a.univer-mr-2.univer-flex.univer-h-7 {
   background-color: rgba(255, 255, 255, 1) !important;
   color: var(--univer-gray-800) !important;
-  border: 1px solid var(--univer-gray-200) !important;
-  border-radius: 10px !important;
+  border: 1px solid var(--univer-gray-200);
+  border-radius: 10px;
 }
 
 /* Univer sheet main canvas: top border only (1px solid gray-200), no other borders */
