@@ -1,5 +1,5 @@
 diff --git a/node_modules/@univerjs/sheets-ui/lib/es/index.js b/node_modules/@univerjs/sheets-ui/lib/es/index.js
-index 7ed46d8..a601c2c 100644
+index 7ed46d8..f2bfe11 100644
 --- a/node_modules/@univerjs/sheets-ui/lib/es/index.js
 +++ b/node_modules/@univerjs/sheets-ui/lib/es/index.js
 @@ -77,15 +77,15 @@ var Am = /* @__PURE__ */ ((r) => (r[r.FORMULA_EDITOR_SHOW = 100] = "FORMULA_EDIT
@@ -13,16 +13,53 @@ index 7ed46d8..a601c2c 100644
      // widgets: { tl: true, tc: true, tr: true, ml: true, mr: true, bl: true, bc: true, br: true },
      widgets: {},
 -    widgetSize: 6,
-+    widgetSize: 12,
++    widgetSize: 8,
      widgetStrokeWidth: 1,
      widgetStroke: t,
 -    autofillSize: 6,
-+    autofillSize: 12,
++    autofillSize: 8,
      autofillStrokeWidth: 1,
      autofillStroke: t,
      rowHeaderFill: n,
+@@ -1168,7 +1168,7 @@ class qC {
+     const S = this._control.currentStyle, R = this._getScale();
+     this.isHelperSelection && (this._helperSelection = new we($u, {
+       stroke: S.stroke,
+-      strokeWidth: S.strokeWidth / R
++      strokeWidth: 1 / R
+     }), i.addObject(this._helperSelection));
+     const I = i.getViewport(F.VIEW_MAIN), y = gi.create(i);
+     this._scrollTimer = y, y.startScroll(s, l, I), i.disableObjectsEvent(), this._scenePointerMoveSub = i.onPointerMove$.subscribeEvent((M) => {
+@@ -1370,7 +1370,7 @@ class qC {
+     const v = tl / p, C = new pn(g).darken(2).toRgbString();
+     this.isHelperSelection && (this._helperSelection = new we($u, {
+       stroke: C,
+-      strokeWidth: m + v / 2
++      strokeWidth: 1 / p + v / 2
+     }), i.addObject(this._helperSelection)), this._activeViewport = i.getActiveViewportByCoord(Fe.FromArray([t, n]));
+     const b = i.getViewport(F.VIEW_MAIN), S = gi.create(
+       i,
+@@ -1813,6 +1813,9 @@ class eu extends ue {
+       isAnimationDash: a
+     } = n;
+     let c = n.autofillSize, d = n.strokeWidth, u = n.autofillStrokeWidth;
++    const _r = this._selectionRenderModel.getRange(), _single = _r.startRow === _r.endRow && _r.startColumn === _r.endColumn;
++    if (!_single)
++      d = 1;
+     const h = this._getScale(), g = (d + tl) / 2 / h;
+     d /= h, c /= h, u /= h < 1 ? 1 : h;
+     const m = tl / h, f = CS / h, { startX: p, startY: v, endX: C, endY: b } = this._selectionRenderModel;
+@@ -1855,7 +1858,7 @@ class eu extends ue {
+     }), l == null)
+       this.dashedRect.hide(), this._stopAntLineAnimation();
+     else {
+-      const S = n.strokeWidth * 2 / h;
++      const S = d * 2;
+       this.dashedRect.transformByState({
+         height: b - v,
+         width: C - p,
 diff --git a/node_modules/@univerjs/sheets-ui/lib/index.js b/node_modules/@univerjs/sheets-ui/lib/index.js
-index 7ed46d8..a601c2c 100644
+index 7ed46d8..f2bfe11 100644
 --- a/node_modules/@univerjs/sheets-ui/lib/index.js
 +++ b/node_modules/@univerjs/sheets-ui/lib/index.js
 @@ -77,15 +77,15 @@ var Am = /* @__PURE__ */ ((r) => (r[r.FORMULA_EDITOR_SHOW = 100] = "FORMULA_EDIT
@@ -36,11 +73,48 @@ index 7ed46d8..a601c2c 100644
      // widgets: { tl: true, tc: true, tr: true, ml: true, mr: true, bl: true, bc: true, br: true },
      widgets: {},
 -    widgetSize: 6,
-+    widgetSize: 12,
++    widgetSize: 8,
      widgetStrokeWidth: 1,
      widgetStroke: t,
 -    autofillSize: 6,
-+    autofillSize: 12,
++    autofillSize: 8,
      autofillStrokeWidth: 1,
      autofillStroke: t,
      rowHeaderFill: n,
+@@ -1168,7 +1168,7 @@ class qC {
+     const S = this._control.currentStyle, R = this._getScale();
+     this.isHelperSelection && (this._helperSelection = new we($u, {
+       stroke: S.stroke,
+-      strokeWidth: S.strokeWidth / R
++      strokeWidth: 1 / R
+     }), i.addObject(this._helperSelection));
+     const I = i.getViewport(F.VIEW_MAIN), y = gi.create(i);
+     this._scrollTimer = y, y.startScroll(s, l, I), i.disableObjectsEvent(), this._scenePointerMoveSub = i.onPointerMove$.subscribeEvent((M) => {
+@@ -1370,7 +1370,7 @@ class qC {
+     const v = tl / p, C = new pn(g).darken(2).toRgbString();
+     this.isHelperSelection && (this._helperSelection = new we($u, {
+       stroke: C,
+-      strokeWidth: m + v / 2
++      strokeWidth: 1 / p + v / 2
+     }), i.addObject(this._helperSelection)), this._activeViewport = i.getActiveViewportByCoord(Fe.FromArray([t, n]));
+     const b = i.getViewport(F.VIEW_MAIN), S = gi.create(
+       i,
+@@ -1813,6 +1813,9 @@ class eu extends ue {
+       isAnimationDash: a
+     } = n;
+     let c = n.autofillSize, d = n.strokeWidth, u = n.autofillStrokeWidth;
++    const _r = this._selectionRenderModel.getRange(), _single = _r.startRow === _r.endRow && _r.startColumn === _r.endColumn;
++    if (!_single)
++      d = 1;
+     const h = this._getScale(), g = (d + tl) / 2 / h;
+     d /= h, c /= h, u /= h < 1 ? 1 : h;
+     const m = tl / h, f = CS / h, { startX: p, startY: v, endX: C, endY: b } = this._selectionRenderModel;
+@@ -1855,7 +1858,7 @@ class eu extends ue {
+     }), l == null)
+       this.dashedRect.hide(), this._stopAntLineAnimation();
+     else {
+-      const S = n.strokeWidth * 2 / h;
++      const S = d * 2;
+       this.dashedRect.transformByState({
+         height: b - v,
+         width: C - p,
