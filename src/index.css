@@ -100,11 +100,14 @@ button:focus-visible {
   border-image: none !important;
 }
 
-/* Univer header formula bar area: 1px solid gray-200 border */
+/* Univer header formula bar area: 1px solid border, 10px radius, border-box */
 #univer-container header .univer-flex.univer-w-full.univer-flex-1.univer-overflow-hidden.univer-pl-3 {
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--univer-gray-200);
+  border: 1px solid rgb(27, 28, 31);
+  border-radius: 10px;
+  background: unset;
+  background-color: unset;
+  box-sizing: border-box;
+  padding-top: 2px;
 }
 
 /* Start dropdown button in Univer header: light pill → white box with border and 10px radius */
