@@ -1,0 +1,46 @@
+diff --git a/node_modules/@univerjs/sheets-ui/lib/es/index.js b/node_modules/@univerjs/sheets-ui/lib/es/index.js
+index 7ed46d8..a601c2c 100644
+--- a/node_modules/@univerjs/sheets-ui/lib/es/index.js
++++ b/node_modules/@univerjs/sheets-ui/lib/es/index.js
+@@ -77,15 +77,15 @@ var Am = /* @__PURE__ */ ((r) => (r[r.FORMULA_EDITOR_SHOW = 100] = "FORMULA_EDIT
+ function sr(r) {
+   const e = r.getColorFromTheme("primary.600"), t = r.getColorFromTheme("white"), n = new pn(e).setAlpha(0.07).toRgbString();
+   return {
+-    strokeWidth: 1,
++    strokeWidth: 2,
+     stroke: e,
+     fill: n,
+     // widgets: { tl: true, tc: true, tr: true, ml: true, mr: true, bl: true, bc: true, br: true },
+     widgets: {},
+-    widgetSize: 6,
++    widgetSize: 12,
+     widgetStrokeWidth: 1,
+     widgetStroke: t,
+-    autofillSize: 6,
++    autofillSize: 12,
+     autofillStrokeWidth: 1,
+     autofillStroke: t,
+     rowHeaderFill: n,
+diff --git a/node_modules/@univerjs/sheets-ui/lib/index.js b/node_modules/@univerjs/sheets-ui/lib/index.js
+index 7ed46d8..a601c2c 100644
+--- a/node_modules/@univerjs/sheets-ui/lib/index.js
++++ b/node_modules/@univerjs/sheets-ui/lib/index.js
+@@ -77,15 +77,15 @@ var Am = /* @__PURE__ */ ((r) => (r[r.FORMULA_EDITOR_SHOW = 100] = "FORMULA_EDIT
+ function sr(r) {
+   const e = r.getColorFromTheme("primary.600"), t = r.getColorFromTheme("white"), n = new pn(e).setAlpha(0.07).toRgbString();
+   return {
+-    strokeWidth: 1,
++    strokeWidth: 2,
+     stroke: e,
+     fill: n,
+     // widgets: { tl: true, tc: true, tr: true, ml: true, mr: true, bl: true, bc: true, br: true },
+     widgets: {},
+-    widgetSize: 6,
++    widgetSize: 12,
+     widgetStrokeWidth: 1,
+     widgetStroke: t,
+-    autofillSize: 6,
++    autofillSize: 12,
+     autofillStrokeWidth: 1,
+     autofillStroke: t,
+     rowHeaderFill: n,
