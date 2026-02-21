@@ -108,6 +108,12 @@ button:focus-visible {
   border-image: none !important;
 }
 
+/* Univer spreadsheet header: horizontal padding */
+#univer-container header {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 /* Ribbon header: no bottom border (Ro2 .univer-box-border), 2px vertical margin */
 #univer-container header > .univer-box-border {
   border-bottom-width: 0;
