@@ -77,3 +77,17 @@ button:focus-visible {
 .univer-inline-block.univer-max-w-full.univer-truncate:active {
   border-radius: 8px;
 }
+
+/* Formula bar: remove all borders */
+[data-u-comp="formula-bar"],
+[data-u-comp="formula-bar"] *,
+[data-u-comp="defined-name"],
+[data-u-comp="defined-name"] * {
+  border-width: 0 !important;
+  border-style: none !important;
+  box-shadow: none !important;
+}
+[data-u-comp="formula-bar"] .univer-ring-1 {
+  --tw-ring-width: 0 !important;
+  box-shadow: none !important;
+}
