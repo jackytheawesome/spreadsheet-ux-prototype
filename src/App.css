@@ -11,8 +11,8 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 0.75rem 1rem;
-  background: var(--g-color-base-background, #fff);
-  border-bottom: 1px solid var(--g-color-line-generic-solid, #e5e5e5);
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
   flex-shrink: 0;
 }
 
