@@ -18,6 +18,17 @@
   flex-shrink: 0;
 }
 
+.app-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-logo {
+  display: block;
+  flex-shrink: 0;
+}
+
 .app-title {
   margin: 0;
   font-size: 1rem;

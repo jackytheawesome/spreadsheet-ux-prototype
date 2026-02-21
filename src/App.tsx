@@ -45,7 +45,10 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1 className="app-title">Прототип таблиц</h1>
+        <div className="app-title-row">
+          <img src="/logo.svg" alt="" className="app-logo" width={30} height={30} />
+          <h1 className="app-title">Прототип таблицы</h1>
+        </div>
       </header>
       <div id="univer-container" className="univer-container" />
     </div>
