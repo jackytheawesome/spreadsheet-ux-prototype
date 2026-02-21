@@ -92,16 +92,10 @@ button:focus-visible {
   box-shadow: none !important;
 }
 
-/* Name box (defined-name) wrapper: 1px solid border, 10px radius */
-[data-u-comp="defined-name"] > .univer-relative.univer-box-border.univer-flex.univer-h-full.univer-w-24 {
-  border-style: solid !important;
-  border-width: 1px !important;
-  border-color: var(--univer-gray-200) !important;
+/* Name box (defined-name): 1px gray-200 border, 10px radius */
+[data-u-comp="defined-name"] {
+  border: 1px solid var(--univer-gray-200, #e3e5ea) !important;
   border-radius: 10px !important;
-  border-top-left-radius: 10px !important;
-  border-top-right-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
-  border-bottom-left-radius: 10px !important;
 }
 
 /* Name box input: no right border (override univer-border-r) */
@@ -114,14 +108,16 @@ button:focus-visible {
 
 /* Univer spreadsheet header: horizontal padding and margin */
 #univer-container header {
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: 12px;
-  margin-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
-/* Ribbon header: no bottom border (Ro2 .univer-box-border), 2px vertical margin */
+/* Ribbon header: no bottom border (Ro2 .univer-box-border), 2px vertical margin, no horizontal padding */
 #univer-container header > .univer-box-border {
+  padding-left: 0;
+  padding-right: 0;
   border-bottom-width: 0;
   border-bottom-color: transparent;
   border-bottom-style: none;
@@ -160,14 +156,18 @@ button:focus-visible {
   border-image: none !important;
 }
 
-/* Univer sheet canvas wrapper (the div that directly contains the render canvas): full border + radius */
+/* Univer sheet canvas wrapper and canvas: no border, no outline, no ring */
 #univer-container div:has(> canvas[data-u-comp="render-canvas"]) {
-  border: 1px solid var(--univer-gray-200, #e3e5ea);
-  border-radius: 10px;
-  box-sizing: border-box;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-/* Univer sheet main canvas: no border/outline */
+#univer-container div.univer-ring-1:has(canvas[data-u-comp="render-canvas"]) {
+  --tw-ring-width: 0 !important;
+  box-shadow: none !important;
+}
+
 canvas[data-u-comp="render-canvas"] {
   border: none !important;
   outline: none !important;
