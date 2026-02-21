@@ -92,6 +92,14 @@ button:focus-visible {
   box-shadow: none !important;
 }
 
+/* Ribbon header: no bottom border (Ro2 .univer-box-border) */
+#univer-container header > .univer-box-border {
+  border-bottom-width: 0 !important;
+  border-bottom-color: transparent !important;
+  border-bottom-style: none !important;
+  border-image: none !important;
+}
+
 /* Univer header formula bar area: 1px solid gray-200 border */
 #univer-container header .univer-flex.univer-w-full.univer-flex-1.univer-overflow-hidden.univer-pl-3 {
   border-style: solid;
