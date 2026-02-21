@@ -106,12 +106,29 @@ button:focus-visible {
   border-image: none !important;
 }
 
-/* Univer spreadsheet header: horizontal padding and margin */
+/* Univer spreadsheet header: horizontal padding and margin; no bottom border */
 #univer-container header {
+  padding-top: 2px;
+  padding-bottom: 2px;
   padding-left: 12px;
   padding-right: 12px;
   margin-left: 0px;
   margin-right: 0px;
+  border-style: solid;
+  border-color: var(--univer-gray-200);
+  border-top-width: 0;
+  border-top-style: none;
+  border-top-color: transparent;
+  border-right-width: 0;
+  border-right-style: none;
+  border-right-color: transparent;
+  border-left-width: 0;
+  border-left-style: none;
+  border-left-color: transparent;
+  border-bottom-width: 0;
+  border-bottom-color: transparent;
+  border-bottom-style: none;
+  border-image: none;
 }
 
 /* Ribbon header: no bottom border (Ro2 .univer-box-border), 2px vertical margin, no horizontal padding */
