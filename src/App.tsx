@@ -6,6 +6,14 @@ import UniverPresetSheetsCoreEnUS from '@univerjs/preset-sheets-core/locales/en-
 import '@univerjs/preset-sheets-core/lib/index.css'
 import './App.css'
 
+/** Only these fonts are shown in the font dropdown (Univer default list overridden). */
+const ALLOWED_FONTS = [
+  { value: 'Arial', label: 'fontFamily.arial', category: 'sans-serif' as const },
+  { value: 'Times New Roman', label: 'fontFamily.times-new-roman', category: 'serif' as const },
+  { value: 'Tahoma', label: 'fontFamily.tahoma', category: 'sans-serif' as const },
+  { value: 'Verdana', label: 'fontFamily.verdana', category: 'sans-serif' as const },
+]
+
 function App() {
   const univerRef = useRef<ReturnType<typeof createUniver> | null>(null)
 
@@ -18,6 +26,7 @@ function App() {
       presets: [
         UniverSheetsCorePreset({
           container: 'univer-container',
+          customFontFamily: { override: true, list: ALLOWED_FONTS },
         }),
       ],
     })
