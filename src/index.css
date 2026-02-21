@@ -117,7 +117,8 @@ button:focus-visible {
   background: unset;
   background-color: unset;
   box-sizing: border-box;
-  padding-top: 2px;
+  padding-top: 4px;
+  padding-right: 4px;
   padding-bottom: 4px;
   margin-top: 0;
   margin-bottom: 0;
