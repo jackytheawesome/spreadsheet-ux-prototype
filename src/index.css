@@ -112,3 +112,9 @@ button:focus-visible {
   border: 1px solid rgba(235, 235, 235, 1) !important;
   border-radius: 10px !important;
 }
+
+/* Univer sheet main canvas: top border only (1px solid gray-200), no other borders */
+canvas[data-u-comp="render-canvas"] {
+  border: none;
+  border-top: 1px solid var(--univer-gray-200);
+}
